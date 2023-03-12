@@ -1,0 +1,27 @@
++-------------+       +-------------+       +-------------+       +-------------+       +-------------+
+|   DEPARTMENT|       |   EMPLOYEE  |       |   EMP_TITLE |       |   TITLES    |       |    SALARY   |
++-------------+       +-------------+       +-------------+       +-------------+       +-------------+
+|  dept_no PK |  |    |  emp_no PK  |       |  title_id PK |  |   title_id PK|  |       |  emp_no FK  |
+|  dept_name  |  |    |  ...        |       |  title      |  |   title     |  |         |  salary     |
++-------------+  |    |  dept_no FK |  +--->|             |  |             |  |         |  from_date  |
+                  |    |  title_id FK|  |    +-------------+  |  +----------+           |  to_date    |
+                  |    |  birth_date |  |                      |                         +-------------+
+                  |    |  first_name |  |                      |             
+                  |    |  last_name  |  |                      |             
+                  |    |  sex        |  |                      |             
+                  |    |  hire_date  |  |                      |             
+                  |    +-------------+  |                      |             
+                  |                      |                      |             
+                  |                      |                      |             
+                  V                      V                      V             
+           +-------------+         +-------------+         +-------------+        
+           |  DEPT_EMP    |         |  TITLE_EMP  |         |   SALARY    |        
+           +-------------+         +-------------+         +-------------+         
+           |  emp_no FK  |         |  emp_no FK  |         |  emp_no FK  |                      
+           |  dept_no FK |         |  title_id FK|         |  salary     |                      
+           |  ...        |         |  ...        |         |  from_date  |                    
+           +-------------+         +-------------+         |  to_date    |         
+                                                             +-------------+         
+                                                                                     
+                                                                                     
+                                                                                   
